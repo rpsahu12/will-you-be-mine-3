@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask Her Out</title>
+function moveRandomEl(elm) {
+  elm.style.position = "absolute";
+  elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+  elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+}
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="tenor-gif-embed"
-        data-postid="15974530976611222074"
-        data-share-method="host"
-        data-aspect-ratio="1.26923"
-        data-width="100%"
-      >
-        <a
-          href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074"
-          >Peach Goma Phone Sticker</a
-        >from
-        <a href="https://tenor.com/search/peach+goma-stickers"
-          >Peach Goma Stickers</a
-        >
-      </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
+const moveRandom = document.querySelector("#move-random");
 
-      <h1>Manja na! Kitna bhav khaegi 😭</h1>
-    
-
-      <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="#" id="move-random">No</a>
-      </div>
-    </div>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
+moveRandom.addEventListener("mouseenter", function (e) {
+  moveRandomEl(e.target);
+});
